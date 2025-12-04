@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resim Arama</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="app">
+
+        <header class="app-header">
+            <h1>Resim Arama</h1>
+            <p>Unsplash üzerinden yüksek kaliteli görseller ara, keşfet, ilham al.</p>
+        </header>
+
+        <div class="form-wrapper">
+            <form id="form">
+
+                <!-- Input + ikon -->
+                <div class="input-wrapper">
+                    <input id="searchInput" type="text" placeholder="Örn: sunset, city night, forest..." />
+                    <span class="input-icon">🔍</span>
+                </div>
+
+                <!-- Yapay zeka destekli gibi davranan öneri alanı -->
+                <div class="ai-helper">
+                    <p class="ai-title">✨ Akıllı Öneri</p>
+                    <p class="ai-suggestion" id="aiSuggestion">
+                        Bugün ne aramak istersin? “nature”, “city night”, “minimal desk” deneyebilirsin.
+                    </p>
+
+                    <div class="chip-wrapper" id="chipWrapper">
+                        <button type="button" class="chip">nature</button>
+                        <button type="button" class="chip">city night</button>
+                        <button type="button" class="chip">abstract</button>
+                        <button type="button" class="chip">minimal desk</button>
+                        <button type="button" class="chip">street photography</button>
+                    </div>
+                </div>
+
+                <div class="button-wrapper">
+                    <button id="searchButton" type="submit">Ara</button>
+                    <button id="clearButton" type="button">Temizle</button>
+                </div>
+            </form>
+        </div>
+
+        <div id="loader" class="loader hidden">
+            <span class="loader-dot"></span>
+            <span class="loader-dot"></span>
+            <span class="loader-dot"></span>
+        </div>
+
+        <div class="imageList-wrapper">
+            <div id="emptyState" class="empty-state">
+                <h2>Henüz arama yapmadın</h2>
+                <p>Yukarıya bir kelime yaz ya da aşağıdaki etiketlerden birine tıkla.</p>
+            </div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
